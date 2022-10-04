@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.reveal-text {
+  font-size: 6rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+  .reveal-text {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: url("background.png");
+    background-repeat: repeat-x;
+    -webkit-animation: reveal-background 2s ease-in-out;
+            animation: reveal-background 2s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
+
+@-webkit-keyframes reveal-background {
+  0% {
+    background-size: 0px;
+    background-position-y: 0%;
+  }
+  10% {
+    background-size: 30px;
+    background-position-y: 0%;
+  }
+  35%, 45% {
+    background-position-y: 100%;
+  }
+  70% {
+    background-size: 30px;
+    background-position-y: 0%;
+  }
+  100% {
+    background-size: 200px;
+  }
+}
+
+@keyframes reveal-background {
+  0% {
+    background-size: 0px;
+    background-position-y: 0%;
+  }
+  10% {
+    background-size: 30px;
+    background-position-y: 0%;
+  }
+  35%, 45% {
+    background-position-y: 100%;
+  }
+  70% {
+    background-size: 30px;
+    background-position-y: 0%;
+  }
+  100% {
+    background-size: 200px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
