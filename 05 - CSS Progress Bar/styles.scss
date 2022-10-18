@@ -1,0 +1,40 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #aaa;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+.progress-bar{
+    width: 600px;
+    height: 60px;
+    background-color: #333;
+    max-width: 90%;
+    border-radius: 48px;
+    padding:0.5rem 1rem;
+
+    &:before{
+        display: flex;
+        align-items: center;
+        content: attr(data-label);
+        min-width: 45px;
+        display: block;
+        font-size: 2rem;
+        height: 100%;
+        max-width: 100%;
+        width: calc(var(--width, 0) * 1%);
+        background-color: rgba(255, 154, 0, 1);
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 48px;
+    }
+}
