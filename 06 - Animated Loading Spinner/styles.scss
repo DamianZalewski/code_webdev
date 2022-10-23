@@ -1,0 +1,73 @@
+body{
+    margin:0;
+    padding:0;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #aaa;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+.spinner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    
+    .spinner-text{
+        font-size: 3rem;
+        animation: spinner-text-animation 2s ease-in-out infinite;
+    }
+
+    .spinner-sector{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border:10px solid transparent;
+        mix-blend-mode:overlay;
+    }
+
+    .spinner-sector-blue{
+        border-top-color: lightblue;
+        animation: spinner-sector-rotate 1s ease infinite;
+    }
+
+    .spinner-sector-red{
+        border-top-color: lightcoral;
+        animation: spinner-sector-rotate 0.75s linear infinite;
+    }
+
+    .spinner-sector-green{
+        border-top-color: lightgreen;
+        animation: spinner-sector-rotate 1.25s ease-in-out infinite;
+    }
+}
+
+@keyframes spinner-sector-rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner-text-animation {
+    0%, 100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(0.9);
+        opacity: 0.5;
+    }
+}

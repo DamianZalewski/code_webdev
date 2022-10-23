@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #aaa;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.spinner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.spinner .spinner-text {
+  font-size: 3rem;
+  -webkit-animation: spinner-text-animation 2s ease-in-out infinite;
+          animation: spinner-text-animation 2s ease-in-out infinite;
+}
+
+.spinner .spinner-sector {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 10px solid transparent;
+  mix-blend-mode: overlay;
+}
+
+.spinner .spinner-sector-blue {
+  border-top-color: lightblue;
+  -webkit-animation: spinner-sector-rotate 1s ease infinite;
+          animation: spinner-sector-rotate 1s ease infinite;
+}
+
+.spinner .spinner-sector-red {
+  border-top-color: lightcoral;
+  -webkit-animation: spinner-sector-rotate 0.75s linear infinite;
+          animation: spinner-sector-rotate 0.75s linear infinite;
+}
+
+.spinner .spinner-sector-green {
+  border-top-color: lightgreen;
+  -webkit-animation: spinner-sector-rotate 1.25s ease-in-out infinite;
+          animation: spinner-sector-rotate 1.25s ease-in-out infinite;
+}
+
+@-webkit-keyframes spinner-sector-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-sector-rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spinner-text-animation {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0.5;
+  }
+}
+
+@keyframes spinner-text-animation {
+  0%, 100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0.5;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
