@@ -80,7 +80,8 @@ h2 {
   content: 'Collapse';
 }
 
-.cutoff-text:has(~ .expand-btn:checked) {
+.cutoff-text:has(+ input[type="checkbox"]:checked) {
   max-height: none;
+  background-color: red !important;
 }
 /*# sourceMappingURL=styles.css.map */
